@@ -12,6 +12,7 @@
 		<h2>{{book.author}}</h2>
 		<p ng-show="book.releaseDate.length">Published {{book.releaseDate}}</p>
 		<button ng-click="form = true">Edit Book Info</button>
+		<button ng-click="deleteBook()">Remove Book</button>
 	</div>
 </div>
 <div ng-show="form" class="row">
