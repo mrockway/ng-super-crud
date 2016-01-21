@@ -1,0 +1,42 @@
+<div class="row">
+	<div class="col-md-4">
+		<div class="add-book">
+			<h1 class="page-header">Add a book</h1>
+			<form ng-submit="addBook()">
+				<div class="form-group">
+					<label for="title">Title</label>
+					<input class="form-control" type="text" ng-model="newBook.title" id="title">
+				</div>
+				<div class="form-group">
+					<label for="author">Author</label>
+					<input class="form-control" type="text" ng-model="newBook.author" id="author">
+				</div>
+				<div class="form-group">
+					<label for="image">Image(url)</label>
+					<input class="form-control" type="text" ng-model="newBook.image" id="image">
+				</div>
+				<div class="form-group">
+					<label for="release_date">Release Date</label>
+					<input class="form-control" type="text" ng-model="newBook.release_date" id="release_date">
+				</div>
+				<div class="form-group">
+					<input type="submit" class="form-control btn btn-info" value="Save Book">
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="col-md-8">
+		<h1 class="page-header">All Books</h1>
+		<div ng-repeat="book in allBooks">
+			<div class="row">
+				<div class="col-md-4">
+					<img ng-src="{{book.image}}" width="100px">
+				</div>
+				<div class="col-md-8">
+					<h3><a href="/books/{{book._id}}">{{book.title}}</a></h3>
+					<p>Written by {{book.author}}</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app="crudApp" lang="en">
+<head>
+	<base href="/">
+	<!-- angular -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular.min.js"></script>
+	<!-- angular route -->
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.min.js"></script>
+	<!-- angular resource -->
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-resource.min.js"></script>
+	<!-- custom js -->
+	<script type="text/javascript" src="app.js"></script>
+	<!-- Bootstrap CSS -->
+	<link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<!-- custom css -->
+	<link rel="stylesheet" href="main.css">
+	<meta charset="UTF-8">
+	<title>ng CRUD</title>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-10 col-md-offset-1">
+				<div ng-view></div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

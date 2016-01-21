@@ -1,0 +1,41 @@
+<div class="row">
+	<div class="col-md-12">
+		<a class="pull-right btn btn-info" href="/">All Books</a>		
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-4 col-md-offset-2">
+		<img ng-src="{{book.image}}" width="250px">
+	</div>
+	<div class="col-md-4">
+		<h1 class="page-header">{{book.title}}</h1>
+		<h2>{{book.author}}</h2>
+		<p ng-show="book.releaseDate.length">Published {{book.releaseDate}}</p>
+		<button ng-click="form = true">Edit Book Info</button>
+	</div>
+</div>
+<div ng-show="form" class="row">
+	<div class="col-md-8 col-md-offset-2">
+		<form ng-submit="alterBook()">
+			<div class="form-group">
+				<label for="title">Title</label>
+				<input class="form-control" type="text" ng-model="editBook.title" id="title">
+			</div>
+			<div class="form-group">
+				<label for="author">Author</label>
+				<input class="form-control" type="text" ng-model="editBook.author" id="author">
+			</div>
+			<div class="form-group">
+				<label for="image">Image(url)</label>
+				<input class="form-control" type="text" ng-model="editBook.image" id="image">
+			</div>
+			<div class="form-group">
+				<label for="release_date">Release Date</label>
+				<input class="form-control" type="text" ng-model="editBook.release_date" id="release_date">
+			</div>
+			<div class="form-group">
+				<input type="submit" class="form-control btn btn-info" value="Update Book" ng-click="form = false">
+			</div>
+		</form>
+	</div>
+</div>
